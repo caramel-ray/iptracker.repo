@@ -1,0 +1,137 @@
+:root {
+    --very-dark-gray: #2b2b2b;
+    --dark-gray: #969696;
+}
+
+.App {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.App header {
+    background-image: url('../assets/images/pattern-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+}
+
+/* Map view */
+.App .map-view {
+    flex: 1;
+    background-color: #eee;
+}
+
+.App .map-view > * {
+    height: 100%;
+}
+
+/* Map main */
+.App main {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 2% 10px;
+    gap: 35px;
+}
+
+.App main h1 {
+    color: white;
+    font-weight: 500;
+}
+
+/* Tracker form */
+.App form {
+    width: 400px;
+    max-width: 100%;
+    height: 50px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.App form input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+}
+
+.App form button {
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    width: 50px;
+    background-color: var(--very-dark-gray);
+}
+
+.App form button:hover {
+    background-color: var(--dark-gray);
+    height: 100%;
+}
+
+.App .info-display {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 100%;
+    background-color: #fff;
+    height: 150px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 15px 5px #0002;
+    position: relative;
+    z-index: 400;
+}
+
+.App .info-display .card {
+    flex: 1;
+    height: 100%;
+}
+
+.App .info-display .card:not(:last-child) {
+    padding-right: 30px;
+}
+
+.App .info-display .card p {
+    color: var(--dark-gray);
+    font-weight: 700;
+}
+
+.App .info-display .card h2 {
+    font-size: 1.7em;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1160px) {
+    .App .info-display .card p {
+        font-size: 16px;
+    }
+    .App .info-display .card h2 {
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    
+    .App main {
+        padding: 30px 5% 10px;
+        text-align: center;
+    }
+
+    .App .info-display {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .App main h1 {
+        font-size: 1.5em;
+    }
+}
